@@ -1,0 +1,17 @@
+.pseudo {
+    margin-top: 1.5rem;
+
+}
+
+.pseudo > img {
+    border-radius: 50%;
+    width:20%;
+    display:block;
+    margin: 0 auto;
+}
+
+.pseudo > p {
+    color : var(--textColorWhite);
+    font-family: var(--textFont);
+    text-align: center;
+}

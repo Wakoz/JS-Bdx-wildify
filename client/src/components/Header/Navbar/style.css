@@ -1,0 +1,29 @@
+nav {
+    font-family: var(--textFont);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+   
+}
+
+nav > p {
+    font-family: var(--titleFont);
+    font-size: 1.5rem;
+    color: var(--titleColor);
+    margin-left: -1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColorWhite);
+}
+
+a > img {
+    width:4rem;
+}
+
+ul {
+    list-style: none;
+}
