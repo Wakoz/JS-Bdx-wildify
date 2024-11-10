@@ -1,16 +1,19 @@
-import "./style.css"
+import "./style.css";
+import {useState} from "react";
 import Navbar from "./Navbar";
+import Pseudo from "./Pseudo";
 import Searchbar from "./Searchbar";
-import Pseudo from "./Pseudo"
 
+function Header() {
+    const [showLinks, setShowLinks] = useState(false);
 
-function Header () {
-    return (
-<header>
-<Navbar />
-<Pseudo />
-<Searchbar />
-</header>
-)}
+  return (
+    <header>
+      <Navbar showLinks={showLinks} setShowLinks={setShowLinks}/>
+      <Pseudo />
+      <Searchbar />
+    </header>
+  );
+}
 
 export default Header;

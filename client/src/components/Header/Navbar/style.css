@@ -1,29 +1,120 @@
 nav {
-    font-family: var(--textFont);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
-   
+  font-family: var(--textFont);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-nav > p {
-    font-family: var(--titleFont);
-    font-size: 1.5rem;
-    color: var(--titleColor);
-    margin-left: -1.5rem;
+.logo-text {
+  font-family: var(--titleFont);
+  font-size: 1.5rem;
+  color: var(--titleColor);
+}
+
+.logo-link {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
-    color: var(--textColorWhite);
+  text-decoration: none;
+  color: var(--textColorWhite);
 }
 
 a > img {
-    width:4rem;
+  width: 4rem;
 }
 
 ul {
-    list-style: none;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -100vw;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  visibility: hidden;
+  background-color: var(--bgColor);
+}
+
+.show-nav {
+  right: 0vw;
+  width: 100vw;
+  visibility: visible;
+}
+
+a {
+  padding: 2rem;
+  display: block;
+  font-size: 5vw;
+}
+
+.navbar-burger {
+  display: block;
+  top: 1rem;
+  right: 1 rem;
+  border: none;
+}
+
+.navbar-burger:hover {
+  cursor: pointer;
+}
+
+.burger-bar,
+.burger-bar::before,
+.burger-bar::after {
+  display: block;
+  width: 40px;
+  height: 3px;
+  position: relative;
+  border-radius: 3px;
+  background: var(--textColorWhite);
+}
+
+.burger-bar::before,
+.burger-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burger-bar::before {
+  transform: translateY(-12px);
+}
+
+.burger-bar::after {
+  transform: translateY(12px);
+}
+
+@media screen and (min-width: 768px) {
+  .burger-bar {
+    display: none;
+  }
+
+  nav {
+  }
+  ul {
+    visibility: visible;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    flex-direction: row;
+  }
+
+  ul:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  a {
+    font-size: medium;
+  }
 }

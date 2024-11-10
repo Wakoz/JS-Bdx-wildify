@@ -1,7 +1,19 @@
 header {
-min-height: 15rem;
-background-color: var(--bgColor);
-position: fixed;
-width: 100%;
-font-weight: bold;
+  max-height: 25rem;
+  background-color: var(--bgColor);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left:0;
+  z-index: 100;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+
+    header {
+        display:grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

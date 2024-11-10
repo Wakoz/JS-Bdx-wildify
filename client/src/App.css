@@ -5,16 +5,16 @@
 }
 
 :root {
---bgColor : #0d0d0d;
---titleColor : #ED0000;
---textColorWhite: #FFFEF8;
---titleFont : "Bagel Fat One";
---textFont : "Open sans", sans-serif;
+  --bgColor: #0d0d0d;
+  --titleColor: #ed0000;
+  --textColorWhite: #fffef8;
+  --titleFont: "Bagel Fat One";
+  --textFont: "Open sans", sans-serif;
 }
 
-/* main {
-  margin-top: 15rem;
-} */
+body {
+  padding-top: 25rem;
+}
 
 p {
   padding-bottom: 1rem;
