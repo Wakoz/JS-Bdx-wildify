@@ -1,5 +1,5 @@
 header {
-  max-height: 25rem;
+  max-height: 20rem;
   background-color: var(--bgColor);
   position: fixed;
   width: 100%;
@@ -7,12 +7,13 @@ header {
   left: 0;
   z-index: 100;
   font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 @media screen and (min-width: 768px) {
   header {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    max-height: 12rem;
   }
 }

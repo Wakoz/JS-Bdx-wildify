@@ -11,11 +11,12 @@ function Navbar({ showLinks, setShowLinks }: NavbarProps) {
   };
 
   return (
-    <nav>
+    <>
       <a href="/" className="logo-link">
         <p className="logo-text">WILDIFY</p>
         <img src="../src/assets/logo/logo.svg" alt="logo" />
       </a>
+      <nav>
       <ul className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
         <li>
           <a href="/">Artistes</a>
@@ -34,6 +35,7 @@ function Navbar({ showLinks, setShowLinks }: NavbarProps) {
         <span className="burger-bar"> </span>
       </button>
     </nav>
+    </>
   );
 }
 
