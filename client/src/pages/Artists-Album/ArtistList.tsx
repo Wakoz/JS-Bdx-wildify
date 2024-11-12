@@ -11,15 +11,15 @@ type ArtistListProps = {
 
 function ArtistList({ artists }: ArtistListProps) {
   return (
-    <div className="ArtistList">
+    <div className="ArtistListi">
       {artists.map((artist) => (
-        <figure key={artist.id} className="DisplayEmployee">
+        <figure key={artist.id} className="Artists">
           <img src={artist.picture} alt={artist.name} />
           <figcaption>
             <strong>{artist.name}</strong>
             {artist.genres && artist.genres.length > 0 && (
               <div className="genres">
-                <p>Genres: {artist.genres.join(", ")}</p>
+                <p> Genres: {artist.genres.join(", ")}</p>
               </div>
             )}
           </figcaption>
