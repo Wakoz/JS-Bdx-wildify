@@ -19,7 +19,7 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <p>© 2021 Wildify</p>
+        <p>© 2024 Wildify</p>
         <p>Created by the Wild Code School students</p>
       </footer>
     </>
