@@ -16,20 +16,28 @@ function Navbar({ showLinks, setShowLinks }: NavbarProps) {
       <Link to="/" className="logo-link">
         <p className="logo-text">WILDIFY</p>
         <img src="../src/assets/logo/logo.svg" alt="logo" />
-      </Link >
+      </Link>
       <nav id="top">
         <ul className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
           <li>
-            <Link to="/artists" className="link">Artistes</Link>
+            <Link to="/artists" className="link">
+              Artistes
+            </Link>
           </li>
           <li>
-            <Link to="/podcasts" className="link">Podcasts</Link>
+            <Link to="/podcasts" className="link">
+              Podcasts
+            </Link>
           </li>
           <li>
-            <Link to="/concerts" className="link">Concerts</Link>
+            <Link to="/concerts" className="link">
+              Concerts
+            </Link>
           </li>
           <li>
-            <Link to="/coups-de-coeur" className="link">Coups de ❤️</Link>
+            <Link to="/coups-de-coeur" className="link">
+              Coups de ❤️
+            </Link>
           </li>
         </ul>
         <button
