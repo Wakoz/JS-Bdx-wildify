@@ -1,7 +1,6 @@
 header {
   max-height: 20rem;
   background-color: var(--bgColor);
-  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
