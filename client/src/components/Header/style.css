@@ -2,9 +2,6 @@ header {
   max-height: 20rem;
   background-color: var(--bgColor);
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
   font-weight: bold;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

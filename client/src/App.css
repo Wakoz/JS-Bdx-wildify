@@ -11,12 +11,3 @@
   --titleFont: "Bagel Fat One";
   --textFont: "Open sans", sans-serif;
 }
-
-p {
-  padding-bottom: 1rem;
-  font-family: var(--textFont);
-}
-
-h1 {
-  font-family: var(--titleFont);
-}

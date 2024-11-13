@@ -56,7 +56,7 @@ ul {
 .navbar-burger {
   display: block;
   top: 1rem;
-  right: 1 rem;
+  right: 1rem;
   border: none;
 }
 
@@ -112,7 +112,7 @@ ul {
     flex-direction: row;
   }
 
-  Link {
+  .link {
     font-size: medium;
     padding: 1.5vw;
   }

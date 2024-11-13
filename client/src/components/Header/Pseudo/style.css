@@ -6,7 +6,7 @@
   border-radius: 50%;
   width: 3rem;
   display: block;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .pseudo > p {
