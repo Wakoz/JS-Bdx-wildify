@@ -1,27 +1,14 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <header>
-        <h1 className="logo">
-          <Link to="/">Wildify</Link>
-        </h1>
-        <nav>
-          <Link to="/artists">Artists</Link>
-          <Link to="/podcasts">Podcasts</Link>
-          <Link to="/concerts">Concerts</Link>
-          <Link to="/coups-de-coeur">Coups de ❤️</Link>
-        </nav>
-      </header>
+      <Header />
       <main>
         <Outlet />
       </main>
-      <footer>
-        <p>© 2024 Wildify</p>
-        <p>Created by the Wild Code School students</p>
-      </footer>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import ArtistSearch from "./ArtistSearch";
-import "./Artists.css";
+// import "./Artists.css";
 
 export default function Artists() {
   return (
