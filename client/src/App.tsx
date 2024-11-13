@@ -1,15 +1,27 @@
+import { Link, Outlet } from "react-router-dom";
 import "./App.css";
-import ArtistAlbum from "./pages/Artists-Album/ArtistAlbum";
 
 function App() {
   return (
     <>
       <header>
-        <h1 className="logo">Wildify</h1>
+        <h1 className="logo">
+          <Link to="/">Wildify</Link>
+        </h1>
+        <nav>
+          <Link to="/artists">Artists</Link>
+          <Link to="/podcasts">Podcasts</Link>
+          <Link to="/concerts">Concerts</Link>
+          <Link to="/coups-de-coeur">Coups de ❤️</Link>
+        </nav>
       </header>
       <main>
-        <ArtistAlbum />
+        <Outlet />
       </main>
+      <footer>
+        <p>© 2024 Wildify</p>
+        <p>Created by the Wild Code School students</p>
+      </footer>
     </>
   );
 }

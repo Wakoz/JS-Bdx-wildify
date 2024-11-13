@@ -1,11 +1,11 @@
 import { useState } from "react";
 import ArtistList from "./ArtistList";
 
-function ArtistAlbum() {
+function ArtistSearch() {
   const [artistsList, setArtists] = useState([]);
 
   const getArtists = () => {
-    fetch("http://localhost:3310/api/artists")
+    fetch(`${import.meta.env.VITE_API_URL}/api/artists`)
       .then((response) => response.json())
       .then((data) => {
         setArtists(data.results);
@@ -13,12 +13,12 @@ function ArtistAlbum() {
   };
   return (
     <div className="App">
-      <ArtistList artists={artistsList} />
       <button type="button" onClick={getArtists}>
         Get artists
       </button>
+      <ArtistList artists={artistsList} />
     </div>
   );
 }
 
-export default ArtistAlbum;
+export default ArtistSearch;
