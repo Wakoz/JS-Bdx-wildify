@@ -1,0 +1,39 @@
+article ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  background-color: #7f1000;
+  padding: 3rem;
+}
+li {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+}
+img {
+  width: 80%;
+  height: 80%;
+  border-radius: 1rem;
+}
+button {
+  width: 20%;
+  height: 10%;
+}
+
+article ul li a {
+  text-decoration: none;
+  color: #fffef8;
+}
+article ul li a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  article ul {
+    padding: 2rem 1rem 0 1rem;
+  }
+  ul li {
+    grid-column: span 2;
+    padding-bottom: 2rem;
+  }
+}
