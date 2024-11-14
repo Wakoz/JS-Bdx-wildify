@@ -21,30 +21,30 @@ import Home from "./pages/home";
 // Create router configuration with routes
 // You can add more routes as you build out your app!
 const router = createBrowserRouter([
-	{
-		// The root path
-		element: <App />,
-		children: [
-			{
-				path: "/",
-				element: <Home />,
-			},
-			{
-				path: "/artists",
-				element: <Artists />,
-			},
-			{
-				path: "/podcasts",
-			},
-			{
-				path: "/concerts",
-			},
-			{
-				path: "/coups-de-coeur",
-			},
-		], // Renders the App component for the home page
-	},
-	// Try adding a new route! For example, "/about" with an About component
+  {
+    // The root path
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/artists",
+        element: <Artists />,
+      },
+      {
+        path: "/podcasts",
+      },
+      {
+        path: "/concerts",
+      },
+      {
+        path: "/coups-de-coeur",
+      },
+    ], // Renders the App component for the home page
+  },
+  // Try adding a new route! For example, "/about" with an About component
 ]);
 
 /* ************************************************************************* */
@@ -52,14 +52,14 @@ const router = createBrowserRouter([
 // Find the root element in the HTML document
 const rootElement = document.getElementById("root");
 if (rootElement == null) {
-	throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
+  throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
 }
 
 // Render the app inside the root element
 createRoot(rootElement).render(
-	<StrictMode>
-		<RouterProvider router={router} />
-	</StrictMode>,
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
 );
 
 /**
