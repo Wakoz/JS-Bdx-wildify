@@ -1,14 +1,12 @@
 import "../../App.css";
-import GetPlaylists from "../../components/displayBlocks/MyPlaylistSearch";
 import PodcastSearch from "../../components/displayBlocks/MyArtistsSearch";
+import GetPlaylists from "../../components/displayBlocks/MyPlaylistSearch";
 
 export default function Home() {
-  return (
-    <>
-      <main className="home">
-        <GetPlaylists />
-        <PodcastSearch />
-      </main>
-    </>
-  );
+	return (
+		<main>
+			<GetPlaylists />
+			{/* <PodcastSearch /> */}
+		</main>
+	);
 }
