@@ -369,6 +369,186 @@ app.get("/api/userPodcasts", (req, res, next) => {
   res.json(userPodcasts);
 });
 
+const userArtists = {
+  items: [
+    {
+      external_urls: {
+        spotify: "https://open.spotify.com/artist/5aigDdW1JMwlIHdOgn8JG6",
+      },
+      followers: {
+        href: null,
+        total: 9591,
+      },
+      genres: ["halifax indie", "psych gaze"],
+      href: "https://api.spotify.com/v1/artists/5aigDdW1JMwlIHdOgn8JG6",
+      id: "5aigDdW1JMwlIHdOgn8JG6",
+      images: [
+        {
+          height: 640,
+          url: "https://i.scdn.co/image/ab6761610000e5eb1e4590a2e51c4f72a7476968",
+          width: 640,
+        },
+        {
+          height: 320,
+          url: "https://i.scdn.co/image/ab676161000051741e4590a2e51c4f72a7476968",
+          width: 320,
+        },
+        {
+          height: 160,
+          url: "https://i.scdn.co/image/ab6761610000f1781e4590a2e51c4f72a7476968",
+          width: 160,
+        },
+      ],
+      name: "The Everywheres",
+      popularity: 43,
+      type: "artist",
+      uri: "spotify:artist:5aigDdW1JMwlIHdOgn8JG6",
+    },
+    {
+      external_urls: {
+        spotify: "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj",
+      },
+      followers: {
+        href: null,
+        total: 13377275,
+      },
+      genres: ["ambient pop", "dream pop", "el paso indie", "shoegaze"],
+      href: "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+      id: "1QAJqy2dA3ihHBFIHRphZj",
+      images: [
+        {
+          height: 640,
+          url: "https://i.scdn.co/image/ab6761610000e5eb0e871e0389b9722cc12a4118",
+          width: 640,
+        },
+        {
+          height: 320,
+          url: "https://i.scdn.co/image/ab676161000051740e871e0389b9722cc12a4118",
+          width: 320,
+        },
+        {
+          height: 160,
+          url: "https://i.scdn.co/image/ab6761610000f1780e871e0389b9722cc12a4118",
+          width: 160,
+        },
+      ],
+      name: "Cigarettes After Sex",
+      popularity: 86,
+      type: "artist",
+      uri: "spotify:artist:1QAJqy2dA3ihHBFIHRphZj",
+    },
+    {
+      external_urls: {
+        spotify: "https://open.spotify.com/artist/5b5bt4mZQpJMoCRbiQ7diH",
+      },
+      followers: {
+        href: null,
+        total: 362228,
+      },
+      genres: ["australian indie rock"],
+      href: "https://api.spotify.com/v1/artists/5b5bt4mZQpJMoCRbiQ7diH",
+      id: "5b5bt4mZQpJMoCRbiQ7diH",
+      images: [
+        {
+          height: 640,
+          url: "https://i.scdn.co/image/ab6761610000e5eb080de26afb71545d9666e2a4",
+          width: 640,
+        },
+        {
+          height: 320,
+          url: "https://i.scdn.co/image/ab67616100005174080de26afb71545d9666e2a4",
+          width: 320,
+        },
+        {
+          height: 160,
+          url: "https://i.scdn.co/image/ab6761610000f178080de26afb71545d9666e2a4",
+          width: 160,
+        },
+      ],
+      name: "Royel Otis",
+      popularity: 73,
+      type: "artist",
+      uri: "spotify:artist:5b5bt4mZQpJMoCRbiQ7diH",
+    },
+    {
+      external_urls: {
+        spotify: "https://open.spotify.com/artist/20oT5LKCdO5vqCSgZ83OsQ",
+      },
+      followers: {
+        href: null,
+        total: 50211,
+      },
+      genres: ["lo-fi beats"],
+      href: "https://api.spotify.com/v1/artists/20oT5LKCdO5vqCSgZ83OsQ",
+      id: "20oT5LKCdO5vqCSgZ83OsQ",
+      images: [
+        {
+          height: 640,
+          url: "https://i.scdn.co/image/ab6761610000e5eb6632941f18ac37e864199014",
+          width: 640,
+        },
+        {
+          height: 320,
+          url: "https://i.scdn.co/image/ab676161000051746632941f18ac37e864199014",
+          width: 320,
+        },
+        {
+          height: 160,
+          url: "https://i.scdn.co/image/ab6761610000f1786632941f18ac37e864199014",
+          width: 160,
+        },
+      ],
+      name: "Mayaewk",
+      popularity: 45,
+      type: "artist",
+      uri: "spotify:artist:20oT5LKCdO5vqCSgZ83OsQ",
+    },
+    {
+      external_urls: {
+        spotify: "https://open.spotify.com/artist/73mSg0dykFyhvU96tb5xQV",
+      },
+      followers: {
+        href: null,
+        total: 557976,
+      },
+      genres: [],
+      href: "https://api.spotify.com/v1/artists/73mSg0dykFyhvU96tb5xQV",
+      id: "73mSg0dykFyhvU96tb5xQV",
+      images: [
+        {
+          height: 640,
+          url: "https://i.scdn.co/image/ab6761610000e5eb5211c31290a0d915d4ee2225",
+          width: 640,
+        },
+        {
+          height: 320,
+          url: "https://i.scdn.co/image/ab676161000051745211c31290a0d915d4ee2225",
+          width: 320,
+        },
+        {
+          height: 160,
+          url: "https://i.scdn.co/image/ab6761610000f1785211c31290a0d915d4ee2225",
+          width: 160,
+        },
+      ],
+      name: "Hermanos Gutiérrez",
+      popularity: 70,
+      type: "artist",
+      uri: "spotify:artist:73mSg0dykFyhvU96tb5xQV",
+    },
+  ],
+  total: 338,
+  limit: 5,
+  offset: 0,
+  href: "https://api.spotify.com/v1/me/top/artists?limit=5&locale=fr,fr-FR;q%3D0.8,en-US;q%3D0.5,en;q%3D0.3",
+  next: "https://api.spotify.com/v1/me/top/artists?offset=5&limit=5&locale=fr,fr-FR;q%3D0.8,en-US;q%3D0.5,en;q%3D0.3",
+  previous: null,
+};
+
+app.get("/api/userArtists", (req, res, next) => {
+  res.json(userArtists);
+});
+
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 

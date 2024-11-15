@@ -1,11 +1,11 @@
 import "../../App.css";
 import GetPlaylists from "../../components/displayBlocks/MyPlaylistSearch";
-import ImageBlockHome from "../../components/imageBlock/imageBlockHome";
+import ImageBlockPodcasts from "../../components/imageBlock/imageBlockPodcasts";
 
-export default function Home() {
+export default function Podcasts() {
   return (
     <main>
-      <ImageBlockHome />
+      <ImageBlockPodcasts />
       <GetPlaylists />
     </main>
   );
