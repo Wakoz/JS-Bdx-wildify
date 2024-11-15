@@ -10,7 +10,6 @@ function Navbar({ showLinks, setShowLinks }: NavbarProps) {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
-
   return (
     <>
       <Link to="/" className="logo-link">

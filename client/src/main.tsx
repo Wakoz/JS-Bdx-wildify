@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import Artists from "./pages/Artists-Album/Artists";
+import Home from "./pages/home";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Home />,
       },
       {
         path: "/artists",
