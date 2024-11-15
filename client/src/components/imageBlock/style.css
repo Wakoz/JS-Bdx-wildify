@@ -14,8 +14,6 @@ section.background-image h1 {
 
 @media (max-width: 768px) {
   section.background-image h1 {
-    position: absolute;
-    margin: 30% 0 0 10%;
     font-size: 2rem;
   }
 }
