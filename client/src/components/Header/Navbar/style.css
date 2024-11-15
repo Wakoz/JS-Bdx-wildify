@@ -7,13 +7,10 @@ nav {
   grid-area: 1 / 3 / 2 / 4;
 }
 
-.logo-text {
+.logo-link {
   font-family: var(--titleFont);
   font-size: 1.5rem;
   color: var(--titleColor);
-}
-
-.logo-link {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -55,8 +52,6 @@ nav#top ul {
 
 .navbar-burger {
   display: block;
-  top: 1rem;
-  right: 1rem;
   border: none;
 }
 
@@ -123,9 +118,5 @@ nav#top ul {
     align-items: center;
     padding: 0;
     justify-content: center;
-  }
-
-  .logo-text {
-    padding-left: 1rem;
   }
 }
