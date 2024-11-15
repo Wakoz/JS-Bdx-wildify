@@ -1,8 +1,8 @@
 import "./style.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface PseudoProps {
-  display_name :string;
+  display_name: string;
   images: {
     height: number;
     url: string;
@@ -12,14 +12,15 @@ interface PseudoProps {
 
 function Pseudo() {
   const [pseudoData, setPseudoData] = useState<PseudoProps | null>(null);
-  const getPseudo = ()=> {
+  const getPseudo = () => {
     fetch(`${import.meta.env.VITE_API_URL}/api/pseudo`)
-    .then((response) => response.json())
-    .then((data) => {
-      setPseudoData(data.results[0]);
-    });
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        setPseudoData(data.results[0]);
+      });
+  };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     getPseudo();
   }, []);

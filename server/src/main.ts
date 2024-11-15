@@ -44,17 +44,17 @@ const pseudo = {
     {
       display_name: "Tomardybum",
       images: [
-    {
-      height: 300,
-      url: "https://i.scdn.co/image/ab6775700000ee85cc1f9bc6520bd97b6ca7fbdd",
-      width: 300
-    },
-    {
-      height: 64,
-      url: "https://i.scdn.co/image/ab67757000003b82cc1f9bc6520bd97b6ca7fbdd",
-      width: 64
-    }
-  ],
+        {
+          height: 300,
+          url: "https://i.scdn.co/image/ab6775700000ee85cc1f9bc6520bd97b6ca7fbdd",
+          width: 300,
+        },
+        {
+          height: 64,
+          url: "https://i.scdn.co/image/ab67757000003b82cc1f9bc6520bd97b6ca7fbdd",
+          width: 64,
+        },
+      ],
     },
   ],
 };
