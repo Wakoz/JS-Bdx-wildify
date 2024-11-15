@@ -11,7 +11,8 @@ export default function Navbar({ showLinks, setShowLinks }: NavbarProps) {
     setShowLinks(!showLinks);
   };
   const closeMenu = () => {
-    setShowLinks(false);}
+    setShowLinks(false);
+  };
   return (
     <>
       <Link to="/" className="logo-link">

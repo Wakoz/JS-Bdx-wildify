@@ -47,7 +47,7 @@ nav#top ul {
   background-color: var(--bgColor);
 }
 
-#top ul.show-nav{
+#top ul.show-nav {
   right: 0vw;
   width: 100vw;
   visibility: visible;
