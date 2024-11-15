@@ -1,6 +1,6 @@
 import "./style.css";
 
-export default function ImageBlock() {
+export default function ImageBlockHome() {
   return (
     <section className="background-image">
       <h1>Mes playlists</h1>

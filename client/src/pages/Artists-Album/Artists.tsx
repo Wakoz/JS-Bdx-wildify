@@ -1,7 +1,7 @@
 import ArtistSearch from "./ArtistSearch";
 // import "./Artists.css";
 
-export default function Artists() {
+export default function Artist() {
   return (
     <>
       <img
