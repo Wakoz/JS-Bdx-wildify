@@ -6,7 +6,7 @@ interface PodcastItemProps {
   title: string;
 }
 
-const PodcastItem: React.FC<PodcastItemProps> = ({ imageSrc, title }) => (
+const PodcastItem: React.FC<PodcastItemProps> = ({ title }) => (
   <article className="podcast-item">
     <img
       src="./src/assets/images/podcast.jpg"

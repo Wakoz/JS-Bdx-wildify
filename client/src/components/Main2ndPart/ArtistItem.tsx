@@ -6,7 +6,7 @@ interface ArtistItemProps {
   title: string;
 }
 
-const ArtistItem: React.FC<ArtistItemProps> = ({ imageSrc, title }) => (
+const ArtistItem: React.FC<ArtistItemProps> = ({ title }) => (
   <article className="artist-item">
     <img
       src="./src/assets/images/artistes.jpg"

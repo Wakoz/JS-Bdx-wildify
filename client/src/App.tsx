@@ -9,14 +9,10 @@ function App() {
     <>
       <Header />
       <Outlet />
-      <Footer />
-      <header>
-        <h1 className="logo">Wildify</h1>
-      </header>
       <main>
         <Main2ndPart />
-        <ArtistAlbum />
       </main>
+      <Footer />
     </>
   );
 }

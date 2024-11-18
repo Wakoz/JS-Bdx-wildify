@@ -1,4 +1,3 @@
-import React from "react";
 import "./Main2ndPart.css";
 import ArtistItem from "./ArtistItem";
 import PodcastItem from "./PodcastItem";
