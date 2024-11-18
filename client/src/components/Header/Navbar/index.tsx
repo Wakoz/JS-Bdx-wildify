@@ -6,36 +6,38 @@ interface NavbarProps {
   setShowLinks: (value: boolean) => void;
 }
 
-function Navbar({ showLinks, setShowLinks }: NavbarProps) {
+export default function Navbar({ showLinks, setShowLinks }: NavbarProps) {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
-
+  const closeMenu = () => {
+    setShowLinks(false);
+  };
   return (
     <>
       <Link to="/" className="logo-link">
-        <p className="logo-text">WILDIFY</p>
+        WILDIFY
         <img src="../src/assets/logo/logo.svg" alt="logo" />
       </Link>
       <nav id="top">
         <ul className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
           <li>
-            <Link to="/artists" className="link">
+            <Link to="/artists" className="link" onClick={closeMenu}>
               Artistes
             </Link>
           </li>
           <li>
-            <Link to="/podcasts" className="link">
+            <Link to="/podcasts" className="link" onClick={closeMenu}>
               Podcasts
             </Link>
           </li>
           <li>
-            <Link to="/concerts" className="link">
+            <Link to="/concerts" className="link" onClick={closeMenu}>
               Concerts
             </Link>
           </li>
           <li>
-            <Link to="/coups-de-coeur" className="link">
+            <Link to="/coups-de-coeur" className="link" onClick={closeMenu}>
               Coups de ❤️
             </Link>
           </li>
@@ -52,5 +54,3 @@ function Navbar({ showLinks, setShowLinks }: NavbarProps) {
     </>
   );
 }
-
-export default Navbar;

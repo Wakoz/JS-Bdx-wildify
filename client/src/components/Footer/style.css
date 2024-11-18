@@ -13,4 +13,5 @@ a {
 .logo {
   font-family: var(--titleFont);
   color: var(--titleColor);
+  text-transform: uppercase;
 }

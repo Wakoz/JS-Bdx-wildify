@@ -21,6 +21,7 @@ input {
 .search-button {
   background-color: var(--titleColor);
   font-family: var(--titleFont);
+  color: var(--textColorWhite);
   border-style: none;
   border-radius: 5px;
   width: 5rem;
