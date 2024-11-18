@@ -18,9 +18,14 @@ export default function PodcastSearch() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/userPodcasts`)
       .then((response) => response.json())
-      .then((data) => setUserPodcasts(data.items))
+      .then((data) => {
+        const episodes = data.items.map(
+          (item: { episode: PodcastItem }) => item.episode,
+        );
+        setUserPodcasts(episodes);
+      })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
-
+  console.info(userPodcasts);
   return <MyBlocks items={userPodcasts} />;
 }
