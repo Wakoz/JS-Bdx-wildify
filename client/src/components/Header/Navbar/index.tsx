@@ -16,7 +16,7 @@ export default function Navbar({ showLinks, setShowLinks }: NavbarProps) {
   return (
     <>
       <Link to="/" className="logo-link">
-        <p className="logo-text">WILDIFY</p>
+        WILDIFY
         <img src="../src/assets/logo/logo.svg" alt="logo" />
       </Link>
       <nav id="top">
