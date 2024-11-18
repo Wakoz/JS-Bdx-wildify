@@ -48,6 +48,7 @@ nav#top ul {
   right: 0vw;
   width: 100vw;
   visibility: visible;
+  z-index: 100;
 }
 
 .navbar-burger {
