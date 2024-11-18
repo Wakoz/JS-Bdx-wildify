@@ -1,0 +1,26 @@
+:root {
+  --bgColor: #0d0d0d;
+  --titleColor: #ed0000;
+  --textColorWhite: #fffef8;
+  --titleFont: "Bagel Fat One";
+  --textFont: "Open sans", sans-serif;
+}
+
+.artist-image {
+  border-radius: 8px;
+  width: 200px;
+}
+
+.artist-item figcaption {
+  color: var(--textColorWhite);
+  font-family: var(--textFont);
+  font-size: medium;
+}
+
+@media screen and (max-width: 768px) {
+  .artist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
