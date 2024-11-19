@@ -1,4 +1,4 @@
-import { clientId } from "../services/Auth/userAuth";
+import { clientId, clientSecret } from "../services/Auth/userAuth";
 
 export const getRefreshToken = async () => {
   const refreshToken = localStorage.getItem("refresh_token") || "";
@@ -11,13 +11,15 @@ export const getRefreshToken = async () => {
 
   const payload = {
     method: "POST",
-    header: {
+    headers: {
       "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
     },
     body: new URLSearchParams({
       grant_type: "refresh_token",
       refresh_token: refreshToken,
       client_id: clientId,
+      client_secret: clientSecret,
     }),
   };
 
@@ -30,14 +32,13 @@ export const getRefreshToken = async () => {
   }
 
   const expiresAT = Date.now() + data.expires_in * 1000;
-  localStorage.setItem("expire_at", expiresAT.toString());
+  localStorage.setItem("expires_at", expiresAT.toString());
 };
 
 export const isTokenExpired = () => {
   const expiresAT = localStorage.getItem("expires_at");
   return !expiresAT || Date.now() > Number.parseInt(expiresAT);
 };
-
 export const checkRefreshToken = async () => {
   if (isTokenExpired()) {
     await getRefreshToken();

@@ -7,7 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import Artists from "./pages/Artists/Artists";
+import Artists from "./pages/Artists";
+import Concerts from "./pages/Concerts";
+import Home from "./pages/home";
+import Podcasts from "./pages/podcasts";
 import { authLoader } from "./services/Auth/loader";
 
 // Import additional components for new routes
@@ -28,7 +31,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: authLoader,
+        element: <Home />,
       },
       {
         path: "/artists",
@@ -37,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/podcasts",
-        loader: authLoader,
+        element: <Podcasts />,
       },
       {
         path: "/concerts",
-        loader: authLoader,
+        element: <Concerts />,
       },
       {
         path: "/coups-de-coeur",
