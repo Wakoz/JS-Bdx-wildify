@@ -1,9 +1,9 @@
 import "./style.css";
-import { useEffect, useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface PseudoProps {
   display_name: string;
-  images: {
+  images?: {
     height: number;
     url: string;
     width: number;
@@ -12,30 +12,25 @@ interface PseudoProps {
 
 function Pseudo() {
   const [pseudoData, setPseudoData] = useState<PseudoProps | null>(null);
-  const getPseudo = () => {
+  const getPseudo = useCallback(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/pseudo`)
       .then((response) => response.json())
       .then((data) => {
         setPseudoData(data.results[0]);
       });
-  };
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-  useEffect(() => {
-    getPseudo();
   }, []);
 
-  return (
-    <aside className="pseudo">
-      {pseudoData ? (
-        <>
-          <img src={pseudoData.images[0].url} alt="profile_picture" />
-          <p>{pseudoData.display_name}</p>
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </aside>
+  useEffect(() => {
+    getPseudo();
+  }, [getPseudo]);
+
+  return pseudoData ? (
+    <figure className="pseudo">
+      <img  src={pseudoData.images?.[0]?.url || "../src/assets/pseudo/logo-logout.svg"} alt="profile_picture" />
+      <figcaption>{pseudoData.display_name}</figcaption>
+    </figure>
+  ) : (
+    <p>Loading...</p>
   );
 }
 

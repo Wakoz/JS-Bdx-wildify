@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-.pseudo > p {
+.pseudo > figcaption,p {
   color: var(--textColorWhite);
   font-family: var(--textFont);
   text-align: center;
@@ -26,7 +26,7 @@
   .pseudo > img {
     width: 4rem;
   }
-  .pseudo > p {
+  .pseudo > figcaption {
     padding-top: 0.5rem;
   }
 }
