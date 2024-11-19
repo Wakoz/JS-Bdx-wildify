@@ -554,28 +554,30 @@ app.get("/api/userArtists", (req, res, next) => {
 });
 
 const pseudo = {
-  results: [{
-  "country": "FR",
-  "display_name": "ChatChat_Family",
-  "email": "cecilepuyol@gmail.com",
-  "explicit_content": {
-    "filter_enabled": false,
-    "filter_locked": false
-  },
-  "external_urls": {
-    "spotify": "https://open.spotify.com/user/g4zn9j1m50tg2kqaksl6oppcz"
-  },
-  "followers": {
-    "href": null,
-    "total": 0
-  },
-  "href": "https://api.spotify.com/v1/users/g4zn9j1m50tg2kqaksl6oppcz",
-  "id": "g4zn9j1m50tg2kqaksl6oppcz",
-  "images": [],
-  "product": "premium",
-  "type": "user",
-  "uri": "spotify:user:g4zn9j1m50tg2kqaksl6oppcz"
-}]
+  results: [
+    {
+      country: "FR",
+      display_name: "ChatChat_Family",
+      email: "cecilepuyol@gmail.com",
+      explicit_content: {
+        filter_enabled: false,
+        filter_locked: false,
+      },
+      external_urls: {
+        spotify: "https://open.spotify.com/user/g4zn9j1m50tg2kqaksl6oppcz",
+      },
+      followers: {
+        href: null,
+        total: 0,
+      },
+      href: "https://api.spotify.com/v1/users/g4zn9j1m50tg2kqaksl6oppcz",
+      id: "g4zn9j1m50tg2kqaksl6oppcz",
+      images: [],
+      product: "premium",
+      type: "user",
+      uri: "spotify:user:g4zn9j1m50tg2kqaksl6oppcz",
+    },
+  ],
 };
 
 app.get("/api/pseudo", (req, res) => {

@@ -1,5 +1,5 @@
 import "./style.css";
-import { useState, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface PseudoProps {
   display_name: string;
@@ -26,7 +26,12 @@ function Pseudo() {
 
   return pseudoData ? (
     <figure className="pseudo">
-      <img  src={pseudoData.images?.[0]?.url || "../src/assets/pseudo/logo-logout.svg"} alt="profile_picture" />
+      <img
+        src={
+          pseudoData.images?.[0]?.url || "../src/assets/pseudo/logo-logout.svg"
+        }
+        alt="profile_picture"
+      />
       <figcaption>{pseudoData.display_name}</figcaption>
     </figure>
   ) : (
