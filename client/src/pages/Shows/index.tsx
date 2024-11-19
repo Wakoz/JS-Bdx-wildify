@@ -1,7 +1,7 @@
 import "../../App.css";
 import ImageBlockConcerts from "../../components/imageBlock/imageBlockConcert";
 
-export default function Concerts() {
+export default function Shows() {
   return (
     <main>
       <ImageBlockConcerts />
