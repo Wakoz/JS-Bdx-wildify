@@ -7,10 +7,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import Artists from "./pages/Artists-Album";
+import Artists from "./pages/Artists";
 import Concerts from "./pages/Concerts";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
+import { authLoader } from "./services/Auth/loader";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
   {
     // The root path
     element: <App />,
+    loader: authLoader,
     children: [
       {
         path: "/",
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/artists",
         element: <Artists />,
+        loader: authLoader,
       },
       {
         path: "/podcasts",
@@ -45,6 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/coups-de-coeur",
+        loader: authLoader,
       },
     ], // Renders the App component for the home page
   },
