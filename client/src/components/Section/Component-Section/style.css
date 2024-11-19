@@ -4,8 +4,9 @@
 }
 
 .component-item a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 .component-item figcaption {
   color: var(--textColorWhite);
   font-family: var(--textFont);
@@ -18,6 +19,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .component-image {
     width: 100%;
   }

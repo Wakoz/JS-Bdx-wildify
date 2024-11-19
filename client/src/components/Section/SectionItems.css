@@ -10,7 +10,6 @@ section.playlists-section {
   font-weight: bold;
 }
 
-
 @media screen and (max-width: 768px) {
   section.playlists-section {
     display: flex;

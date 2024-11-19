@@ -1,7 +1,6 @@
 import "./SectionItems.css";
 import ArtistItem from "./Component-Section/ArtistItem";
 import PodcastItem from "./Component-Section/PodcastItem";
-import PlaylistItem from "./Component-Section/PlaylistItem";
 
 function SectionItems() {
   return (

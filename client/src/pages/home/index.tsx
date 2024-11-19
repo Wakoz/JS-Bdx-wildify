@@ -1,7 +1,7 @@
 import "../../App.css";
+import SectionItems from "../../components/Section/SectionItems";
 import GetPlaylists from "../../components/displayBlocks/MyPlaylistSearch";
 import ImageBlockHome from "../../components/imageBlock/imageBlockHome";
-import SectionItems from "../../components/Section/SectionItems";
 
 export default function Home() {
   return (
