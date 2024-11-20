@@ -1,36 +1,22 @@
 import "./style.css";
-import { useCallback, useEffect, useState } from "react";
 
-interface PseudoProps {
+export interface PseudoProps {
   display_name: string;
-  images?: {
-    height: number;
-    url: string;
-    width: number;
-  }[];
+  image: string;
 }
 
-function Pseudo() {
-  const [pseudoData, setPseudoData] = useState<PseudoProps | null>(null);
-  const getPseudo = useCallback(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/pseudo`)
-      .then((response) => response.json())
-      .then((data) => {
-        setPseudoData(data.results[0]);
-      });
-  }, []);
+interface PseudoComponentProps {
+  pseudoData: PseudoProps | null;
+}
 
-  useEffect(() => {
-    getPseudo();
-  }, [getPseudo]);
-
+export default function Pseudo({ pseudoData }: PseudoComponentProps) {
   return pseudoData ? (
     <figure className="pseudo">
       <img
-        src={
-          pseudoData.images?.[0]?.url || "../src/assets/pseudo/logo-logout.svg"
-        }
+        src={pseudoData.image}
         alt="profile_picture"
+        height={64}
+        width={64}
       />
       <figcaption>{pseudoData.display_name}</figcaption>
     </figure>
@@ -38,5 +24,3 @@ function Pseudo() {
     <p>Loading...</p>
   );
 }
-
-export default Pseudo;
