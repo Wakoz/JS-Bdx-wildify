@@ -12,6 +12,7 @@ import Concerts from "./pages/Concerts";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
 import { authLoader } from "./services/Auth/loader";
+import ArtistDetails from "./pages/Artists/ArtistsDetails";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: "/artists",
         element: <Artists />,
+        loader: authLoader,
+      },
+      {
+        path: "/artists/:artistId",
+        element: <ArtistDetails />,
         loader: authLoader,
       },
       {
