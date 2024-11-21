@@ -38,7 +38,6 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
   if (!items || items.length === 0) {
     return null;
   }
-  console.log(items);
   return (
     <li>
       <h2>{title}</h2>
@@ -49,22 +48,23 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
             return (
               <li key={artist.id} className={`${type}-item`}>
                 <Link to={`/artists/${artist.id}`} className="artist-link">
-                <div className="artist-content-wrapper">
-                  {artist.images?.[0] && (
-                    <img
-                      src={artist.images[0].url}
-                      alt={artist.name}
-                      width="50"
-                      height="50"
-                      className={`${type}-image`}
-                    />
-                  )}
-                  <p>{artist.name}</p>
+                  <div className="artist-content-wrapper">
+                    {artist.images?.[0] && (
+                      <img
+                        src={artist.images[0].url}
+                        alt={artist.name}
+                        width="50"
+                        height="50"
+                        className={`${type}-image`}
+                      />
+                    )}
+                    <p>{artist.name}</p>
                   </div>
                 </Link>
               </li>
             );
-          }if (type === "album") {
+          }
+          if (type === "album") {
             const album = item as Album;
             return (
               <li key={album.id} className={`${type}-item`}>
@@ -78,17 +78,19 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
                   />
                 )}
                 <p>{album.name}</p>
-                
+
                 <p> Date de sortie : {album.release_date}</p>
               </li>
             );
-          }if (type === "episode") {
+          }
+          if (type === "episode") {
             const episode = item as Episode;
             return (
               <li key={episode.id} className={`${type}-item`}>
                 <p>{episode.name}</p>
                 <p>
-                  Artiste : {episode.artists?.map((artist) => artist.name).join(", ")}
+                  Artiste : {""}
+                  {episode.artists?.map((artist) => artist.name).join(", ")}
                 </p>
                 <p>Album : {episode.album.name}</p>
               </li>

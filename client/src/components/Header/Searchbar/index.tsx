@@ -1,10 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearch } from "./SearchContext";
 import SearchResultList from "./SearchResultsList";
 import "./style.css";
 
 function Searchbar() {
-  const { searchTerm, setSearchTerm, performSearch, searchResults } = useSearch();
+  const { searchTerm, setSearchTerm, performSearch, searchResults } =
+    useSearch();
   const [isFocused, setIsFocused] = useState(false);
   const searchbarRef = useRef<HTMLFormElement>(null);
 
@@ -22,7 +23,10 @@ function Searchbar() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (searchbarRef.current && !searchbarRef.current.contains(event.target as Node)) {
+      if (
+        searchbarRef.current &&
+        !searchbarRef.current.contains(event.target as Node)
+      ) {
         setIsFocused(false);
       }
     };
@@ -59,17 +63,32 @@ function Searchbar() {
       {isFocused && searchTerm && searchResults && (
         <div className="dropdown-menu">
           <ul>
-            {searchResults.artists?.items && searchResults.artists.items.length > 0 && (
-              <SearchResultList items={searchResults.artists.items} title="Artistes" type="artist" />
-            )}
+            {searchResults.artists?.items &&
+              searchResults.artists.items.length > 0 && (
+                <SearchResultList
+                  items={searchResults.artists.items}
+                  title="Artistes"
+                  type="artist"
+                />
+              )}
 
-            {searchResults.albums?.items && searchResults.albums.items.length > 0 && (
-              <SearchResultList items={searchResults.albums.items} title="Albums" type="album" />
-            )}
+            {searchResults.albums?.items &&
+              searchResults.albums.items.length > 0 && (
+                <SearchResultList
+                  items={searchResults.albums.items}
+                  title="Albums"
+                  type="album"
+                />
+              )}
 
-            {searchResults.episode?.items && searchResults.episode.items.length > 0 && (
-              <SearchResultList items={searchResults.episode.items} title="Épisodes" type="episode" />
-            )}
+            {searchResults.episode?.items &&
+              searchResults.episode.items.length > 0 && (
+                <SearchResultList
+                  items={searchResults.episode.items}
+                  title="Épisodes"
+                  type="episode"
+                />
+              )}
           </ul>
         </div>
       )}

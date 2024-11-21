@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { apiRequest } from '../../api/apiClient';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { apiRequest } from "../../api/apiClient";
 
 interface ArtistDetailsProps {
   id: string;
@@ -16,18 +16,19 @@ function ArtistDetails() {
   const [artist, setArtist] = useState<ArtistDetailsProps | null>(null);
 
   useEffect(() => {
-   if (artistId) {
-     apiRequest(`/artists/${artistId}`)
-       .then((response) => response.json())
-       .then((data) => setArtist(data))
-       .catch((error) => console.error("Erreur lors de la récupération de l'artiste :", error));
-   }
- }, [artistId]);
+    if (artistId) {
+      apiRequest(`/artists/${artistId}`)
+        .then((response) => response.json())
+        .then((data) => setArtist(data))
+        .catch((error) =>
+          console.error("Erreur lors de la récupération de l'artiste :", error),
+        );
+    }
+  }, [artistId]);
 
- if (!artist) {
-   return <p>Chargement...</p>;
- }
-
+  if (!artist) {
+    return <p>Chargement...</p>;
+  }
 
   return (
     <div className="artist-details">
@@ -40,9 +41,7 @@ function ArtistDetails() {
           height="200"
         />
       )}
-      {artist.genres && (
-        <p>Genres : {artist.genres.join(", ")}</p>
-      )}
+      {artist.genres && <p>Genres : {artist.genres.join(", ")}</p>}
     </div>
   );
 }

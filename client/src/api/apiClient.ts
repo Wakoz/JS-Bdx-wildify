@@ -35,4 +35,3 @@ export const apiRequest = async (
   }
 };
 export { checkRefreshToken };
-

@@ -7,11 +7,11 @@ import { SearchProvider } from "./components/Header/Searchbar/SearchContext";
 function App() {
   return (
     <>
-    <SearchProvider>
-      <Header />
-      <Outlet />
-      <Footer />
-    </SearchProvider>
+      <SearchProvider>
+        <Header />
+        <Outlet />
+        <Footer />
+      </SearchProvider>
     </>
   );
 }
