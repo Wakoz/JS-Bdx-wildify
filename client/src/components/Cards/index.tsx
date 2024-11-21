@@ -57,20 +57,26 @@ function Cards() {
           </article>
           <article>
             <h2 className="h2card">Bio</h2>
-            <p className="biocard">X</p>
-            <p className="biocard">X</p>
-            <p className="biocard">X</p>
+            <p className="biocard">Hello Julien, futur dev !!</p>
+            <p className="biocard">
+              Amoureux de la bonne gratte et du son bien vénère. J'aime les bons
+              gros riffs.
+            </p>
+            <p className="biocard">
+              Fan de rock et de metal en priorité, je peux divaguer vers
+              d'autres genres selon mon humeur.
+            </p>
             <h2 className="h2card">Coup de coeur</h2>
             <ul className="ulcard">
-              <li>X</li>
-              <li>X</li>
+              <li>Slipknot</li>
+              <li>Métal</li>
               <li className="music">
                 <a
-                  href="https://open.spotify.com/intl-fr/track/7iD5t0YgWvIIrvZtw6IIxQ?si=4c3ff9e1b27845e6"
+                  href="https://open.spotify.com/intl-fr/track/5mpUKTdskZea0gStWzeHUZ?si=769b69c0cd044bc4"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  🎶🎶
+                  🎶Unsainted🎶
                 </a>
               </li>
             </ul>
@@ -88,9 +94,15 @@ function Cards() {
           </article>
           <article>
             <h2 className="h2card">Bio</h2>
-            <p className="biocard">X</p>
-            <p className="biocard">X</p>
-            <p className="biocard">X</p>
+            <p className="biocard">
+              Grand fan de rock depuis ma découverte de Nirvana à l'âge de 13
+              ans, j'ai ouvert mes horizons au hip-hop US des 00's, les
+              classiques de la soul en passant par l'éléctro.
+            </p>
+            <p className="biocard">
+              Aujourd'hui, j'adore toujours autant la bonne musique, et j'en
+              profites parce que de 20 / 30 ans il n'y en aura plus !
+            </p>
             <h2 className="h2card">Coup de coeur</h2>
             <ul className="ulcard">
               <li>Tame Impala</li>
