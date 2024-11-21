@@ -6,6 +6,9 @@ nav {
   padding: 0.5rem;
   grid-area: 1 / 3 / 2 / 4;
 }
+nav li a:hover {
+  text-decoration: underline;
+}
 
 .logo-link {
   font-family: var(--titleFont);

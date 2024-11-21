@@ -1,14 +1,20 @@
 import "./SectionItems.css";
-import ArtistItem from "./Component-Section/ArtistItem";
-import PodcastItem from "./Component-Section/PodcastItem";
+import LinkItem, { type LinkItemProps } from "./LinkItem";
 
-function SectionItems() {
+type ListLinkItems = { listLinkItems: LinkItemProps[] };
+
+function SectionItems({ listLinkItems }: ListLinkItems) {
   return (
-    <section className="playlists-section">
-      <ArtistItem title="Mes artistes" />
-      <PodcastItem title="Mes podcasts" />
-      {/* <PlaylistItem title="Mes playlists" /> */}
-    </section>
+    <nav className="playlists-section">
+      {listLinkItems.map((linkItem: LinkItemProps) => (
+        <LinkItem
+          key={linkItem.href}
+          imgSrc={linkItem.imgSrc}
+          href={linkItem.href}
+          title={linkItem.title}
+        />
+      ))}
+    </nav>
   );
 }
 
