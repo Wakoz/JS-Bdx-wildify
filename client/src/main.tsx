@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import Artists from "./pages/Artists";
+import Concerts from "./pages/Concerts";
 import CoupDeCoeur from "./pages/CoupDeCoeur";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/concerts",
+        element: <Concerts />,
       },
       {
         path: "/coups-de-coeur",
