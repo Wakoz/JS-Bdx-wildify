@@ -5,8 +5,8 @@ import ImageBlockTeam from "../../components/imageBlock/imageBlockTeam";
 export default function CoupDeCoeur() {
   return (
     <>
-      <Cards />
       <ImageBlockTeam />
+      <Cards />
     </>
   );
 }

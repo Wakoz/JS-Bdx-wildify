@@ -8,11 +8,11 @@ p {
   font-family: var(--textFont), sans-serif;
 }
 .name {
-  transform: translate(1.3rem, -6rem);
+  transform: translate(-3rem, -6rem);
   font-size: 1.2rem;
 }
 .firstname {
-  transform: translate(1.3rem, -4rem);
+  transform: translate(-3rem, -4rem);
   font-size: 1.2rem;
 }
 .profile {
@@ -31,6 +31,7 @@ p {
 .biocard {
   transform: translatex(2rem);
   max-width: 25ch;
+  text-align: left;
 }
 .ulcard {
   transform: translatex(3rem);
@@ -64,10 +65,10 @@ li.music a {
     margin-bottom: 3rem;
   }
   .name {
-    transform: translate(3rem, 2.5rem);
+    transform: translate(2rem, 2.5rem);
   }
   .firstname {
-    transform: translate(3rem, 4rem);
+    transform: translate(2rem, 4rem);
   }
   .profilePicture {
     transform: translate(2rem, 2rem);
