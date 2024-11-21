@@ -5,7 +5,7 @@ const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 const redirectUri = import.meta.env.VITE_REDIRECT_URI;
 const scope =
-  "user-read-private user-read-email user-top-read playlist-read-private";
+  "user-read-private user-read-email user-top-read playlist-read-private user-library-read user-read-playback-position";
 
 const requestUserAuthorization = async () => {
   window.localStorage.setItem("code_verifier", codeVerifier);

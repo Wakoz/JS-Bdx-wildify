@@ -10,6 +10,7 @@ import App from "./App";
 import Artists from "./pages/Artists";
 import ArtistDetails from "./pages/Artists/ArtistsDetails";
 import Concerts from "./pages/Concerts";
+import CoupDeCoeur from "./pages/CoupDeCoeur";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
 import { authLoader } from "./services/Auth/loader";
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/coups-de-coeur",
-        loader: authLoader,
+        element: <CoupDeCoeur />,
       },
     ], // Renders the App component for the home page
   },

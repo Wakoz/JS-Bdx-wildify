@@ -12,6 +12,16 @@
   align-items: center;
 }
 
+ul.dropdownItem li p {
+  color: var(--bgColor);
+  font-weight: normal;
+}
+
+/* li.column {
+  display: flex;
+  flex-direction: column;
+} */
+
 input.search-input {
   background-color: var(--bgColor);
   font-family: var(--textFont);
@@ -74,10 +84,16 @@ button.search-button {
 .album-item,
 .track-item {
   display: flex;
-  align-items: center;
+  align-items: left;
   padding: 0.5rem;
   border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
+}
+
+.artist-item p,
+.album-item p,
+.track-item p {
+text-align: left;
 }
 
 .artist-content-wrapper {
@@ -93,7 +109,7 @@ button.search-button {
 
 .artist-name {
   font-size: 16px;
-  color: var(--textColorWhite);
+  color: var(--textColor);
   margin: 0;
 }
 

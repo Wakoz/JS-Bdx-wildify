@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { apiRequest } from "../../api/apiClient";
 import MyBlocks from "./MyBlocks";
 
-type PodcastItem = {
+type ConcertItem = {
   id: number;
   name: string;
   external_urls: {
@@ -13,25 +13,25 @@ type PodcastItem = {
   }[];
 };
 
-export default function PodcastSearch() {
-  const [userPodcasts, setUserPodcasts] = useState<PodcastItem[]>([]);
+export default function ConcertSearch() {
+  const [userConcerts, setUserConcerts] = useState<ConcertItem[]>([]);
 
   useEffect(() => {
-    const fetchPodcasts = async () => {
+    const fetchConcerts = async () => {
       try {
-        const response = await apiRequest("/me/episodes");
+        const response = await apiRequest("/me/shows");
         const data = await response.json();
-        const episodes = data.items.map(
-          (item: { episode: PodcastItem }) => item.episode,
+        const shows = data.items.map(
+          (item: { show: ConcertItem }) => item.show,
         );
-        setUserPodcasts(episodes);
+        setUserConcerts(shows);
       } catch (error) {
         console.error("Erreur lors de la récupération des podcasts :", error);
       }
     };
 
-    fetchPodcasts();
+    fetchConcerts();
   }, []);
 
-  return <MyBlocks items={userPodcasts} />;
+  return <MyBlocks items={userConcerts} />;
 }

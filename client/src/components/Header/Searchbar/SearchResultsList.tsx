@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./style.css";
 
 interface Artist {
   id: string;
@@ -39,9 +40,9 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
     return null;
   }
   return (
-    <li>
+    <ul className="dropdownItem">
       <h2>{title}</h2>
-      <ul>
+      <li>
         {items.map((item) => {
           if (type === "artist") {
             const artist = item as Artist;
@@ -67,7 +68,7 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
           if (type === "album") {
             const album = item as Album;
             return (
-              <li key={album.id} className={`${type}-item`}>
+              <li key={album.id} className={`${type}-item column`} >
                 {album.images?.[0] && (
                   <img
                     src={album.images[0].url}
@@ -77,9 +78,8 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
                     className={`${type}-image`}
                   />
                 )}
-                <p>{album.name}</p>
-
-                <p> Date de sortie : {album.release_date}</p>
+                <p>{album.name}<br/>
+                Date de sortie : {album.release_date}</p>
               </li>
             );
           }
@@ -98,8 +98,8 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
           }
           return null;
         })}
-      </ul>
-    </li>
+      </li>
+    </ul>
   );
 }
 
