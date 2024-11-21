@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { apiRequest } from "../../api/apiClient";
 import MyBlocks from "./MyBlocks";
 
 type ArtistItem = {
   id: number;
   name: string;
+  genres: string[];
   external_urls: {
     spotify: string;
   };
@@ -16,10 +18,17 @@ export default function ArtistSearch() {
   const [userArtists, setUserArtists] = useState<ArtistItem[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/userArtists`)
-      .then((response) => response.json())
-      .then((data) => setUserArtists(data.items))
-      .catch((error) => console.error("Error fetching data:", error));
+    const fetchArtists = async () => {
+      try {
+        const response = await apiRequest("/me/top/artists");
+        const data = await response.json();
+        setUserArtists(data.items);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des artistes :", error);
+      }
+    };
+
+    fetchArtists();
   }, []);
 
   return <MyBlocks items={userArtists} />;

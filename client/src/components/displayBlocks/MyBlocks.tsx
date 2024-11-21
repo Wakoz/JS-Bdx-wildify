@@ -1,6 +1,7 @@
 import "./style.css";
 
 type DisplayItem = {
+  genres?: string[];
   id: number;
   name: string;
   external_urls: {
@@ -31,6 +32,7 @@ export default function MyBlocks({ items }: MyBlocksProps) {
                   <img src={item.images[0].url} alt={item.name} />
                 )}
                 <h3>{item.name}</h3>
+                {item.genres && <p> Genre: {item.genres.join(", ")} </p>}
               </a>
             </li>
           ))
