@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiRequest } from "../../api/apiClient";
 import MyBlocks from "./MyBlocks";
 
 type PlaylistItem = {
@@ -16,12 +17,17 @@ export default function GetPlaylists() {
   const [userPlaylists, setUserPlaylists] = useState<PlaylistItem[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/userPlaylists`)
-      .then((response) => response.json())
-      .then((data) => setUserPlaylists(data.items))
-      .catch((error) =>
-        console.error("Erreur lors de la récupération des données :", error),
-      );
+    const fetchPlaylists = async () => {
+      try {
+        const response = await apiRequest("/me/playlists");
+        const data = await response.json();
+        setUserPlaylists(data.items);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des artistes :", error);
+      }
+    };
+
+    fetchPlaylists();
   }, []);
 
   return <MyBlocks items={userPlaylists} />;

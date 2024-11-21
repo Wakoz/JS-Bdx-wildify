@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiRequest } from "../../api/apiClient";
 import MyBlocks from "./MyBlocks";
 
 type PodcastItem = {
@@ -16,16 +17,21 @@ export default function PodcastSearch() {
   const [userPodcasts, setUserPodcasts] = useState<PodcastItem[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/userPodcasts`)
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchPodcasts = async () => {
+      try {
+        const response = await apiRequest("/me/episodes");
+        const data = await response.json();
         const episodes = data.items.map(
           (item: { episode: PodcastItem }) => item.episode,
         );
         setUserPodcasts(episodes);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+      } catch (error) {
+        console.error("Erreur lors de la récupération des podcasts :", error);
+      }
+    };
+
+    fetchPodcasts();
   }, []);
-  console.info(userPodcasts);
+
   return <MyBlocks items={userPodcasts} />;
 }
