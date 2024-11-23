@@ -37,8 +37,12 @@ function ArtistDetails() {
     if (artistId) {
       Promise.all([
         apiRequest(`/artists/${artistId}`).then((response) => response.json()),
-        apiRequest(`/artists/${artistId}/albums`).then((response) => response.json()),
-        apiRequest(`/artists/${artistId}/top-tracks?market=FR`).then((response) => response.json())
+        apiRequest(`/artists/${artistId}/albums`).then((response) =>
+          response.json(),
+        ),
+        apiRequest(`/artists/${artistId}/top-tracks?market=FR`).then(
+          (response) => response.json(),
+        ),
       ])
         .then(([artistData, albumsData, topTracksData]) => {
           setArtist(artistData);
@@ -46,7 +50,10 @@ function ArtistDetails() {
           setTopTracks(topTracksData.tracks);
         })
         .catch((error) =>
-          console.error("Erreur lors de la récupération des données de l'artiste :", error),
+          console.error(
+            "Erreur lors de la récupération des données de l'artiste :",
+            error,
+          ),
         );
     }
   }, [artistId]);

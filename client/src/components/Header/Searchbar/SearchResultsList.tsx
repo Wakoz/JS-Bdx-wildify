@@ -68,7 +68,7 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
           if (type === "album") {
             const album = item as Album;
             return (
-              <li key={album.id} className={`${type}-item column`} >
+              <li key={album.id} className={`${type}-item column`}>
                 {album.images?.[0] && (
                   <img
                     src={album.images[0].url}
@@ -78,8 +78,11 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
                     className={`${type}-image`}
                   />
                 )}
-                <p>{album.name}<br/>
-                Date de sortie : {album.release_date}</p>
+                <p>
+                  {album.name}
+                  <br />
+                  Date de sortie : {album.release_date}
+                </p>
               </li>
             );
           }
