@@ -29,10 +29,16 @@ function Cards() {
               Cependant, je reviens toujours à l'énergie brute du Métal et de
               ses multiples ramifications.
             </p>
-            <h2 className="h2card">Coup de coeur</h2>
+            <h2 className="h2card">
+              Coup de <span className="red">coeur</span>
+            </h2>
             <ul className="ulcard">
-              <li>Motörhead</li>
-              <li>Heavy metal</li>
+              <li>
+                <p className="h3card">Artiste : </p> Motörhead
+              </li>
+              <li>
+                <p className="h3card">Genre : </p>Heavy metal
+              </li>
               <li className="music">
                 <a
                   href="https://open.spotify.com/intl-fr/track/7iD5t0YgWvIIrvZtw6IIxQ?si=4c3ff9e1b27845e6"
@@ -66,10 +72,16 @@ function Cards() {
               Fan de rock et de metal en priorité, je peux divaguer vers
               d'autres genres selon mon humeur.
             </p>
-            <h2 className="h2card">Coup de coeur</h2>
+            <h2 className="h2card">
+              Coup de <span className="red">coeur</span>
+            </h2>
             <ul className="ulcard">
-              <li>Slipknot</li>
-              <li>Métal</li>
+              <li>
+                <p className="h3card">Artiste : </p>Slipknot
+              </li>
+              <li>
+                <p className="h3card">Genre : </p>Métal
+              </li>
               <li className="music">
                 <a
                   href="https://open.spotify.com/intl-fr/track/5mpUKTdskZea0gStWzeHUZ?si=769b69c0cd044bc4"
@@ -101,12 +113,18 @@ function Cards() {
             </p>
             <p className="biocard">
               Aujourd'hui, j'adore toujours autant la bonne musique, et j'en
-              profites parce que de 20 / 30 ans il n'y en aura plus !
+              profites parce que dans 20 / 30 ans il n'y en aura plus !
             </p>
-            <h2 className="h2card">Coup de coeur</h2>
+            <h2 className="h2card">
+              Coup de <span className="red">coeur</span>
+            </h2>
             <ul className="ulcard">
-              <li>Tame Impala</li>
-              <li>Rock Indé</li>
+              <li>
+                <p className="h3card">Artiste : </p>Tame Impala
+              </li>
+              <li>
+                <p className="h3card">Genre : </p>Rock Indé
+              </li>
               <li className="music">
                 <a
                   href="https://open.spotify.com/intl-fr/track/4t6vrJg7GcUELCAxHX1z5W?si=e1b03e29e5154b7b"
@@ -131,7 +149,6 @@ function Cards() {
           </article>
           <article>
             <h2 className="h2card">Bio</h2>
-            <p className="biocard">Y’a pas que le code dans la vie 😉</p>
             <p className="biocard">
               Bercée par la chanson française, j’ai découvert plus tard la pop
               anglo-saxonne avec auparavant un passage adolescent par les boys
@@ -144,10 +161,16 @@ function Cards() {
               concert de nombreuses fois c’est du bonbon pour les oreilles et le
               coeur !
             </p>
-            <h2 className="h2card">Coup de coeur</h2>
+            <h2 className="h2card">
+              Coup de <span className="red">coeur</span>
+            </h2>
             <ul className="ulcard">
-              <li>Herman Düne</li>
-              <li>folk</li>
+              <li>
+                <p className="h3card">Artiste : </p>Herman Düne
+              </li>
+              <li>
+                <p className="h3card">Genre : </p>folk
+              </li>
               <li className="music">
                 <a
                   href="https://open.spotify.com/intl-fr/track/3OAYeGzhHTbLZTnpcSM1yN?si=7ab4e42fb4984ee9"
@@ -183,10 +206,16 @@ function Cards() {
               J'adore bidouiller ce que je peux sur un ordinateur le tout avec
               une bonne playlist dans les oreilles !
             </p>
-            <h2 className="h2card">Coup de coeur</h2>
+            <h2 className="h2card">
+              Coup de <span className="red">coeur</span>
+            </h2>
             <ul className="ulcard">
-              <li>NTO</li>
-              <li>techno</li>
+              <li>
+                <p className="h3card">Artiste : </p>NTO
+              </li>
+              <li>
+                <p className="h3card">Genre : </p>techno
+              </li>
               <li className="music">
                 <a
                   href="https://open.spotify.com/intl-fr/track/12LOYGBr0T0IqyuhEILYFh?si=f5f909ca193941fa"
