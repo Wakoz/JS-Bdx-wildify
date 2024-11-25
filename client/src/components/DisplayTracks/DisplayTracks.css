@@ -1,11 +1,12 @@
 section.top-tracks-section {
-  background-color: var(--bgColor);
+  background-color: var(--bgColorDarkRed);
 }
 
 h2.section-title {
   font-family: var(--titleFont);
   color: var(--textColorWhite);
   margin-left: 10%;
+  padding-top: 2rem;
 }
 
 section.top-tracks-section ul {
@@ -35,7 +36,7 @@ section.top-tracks-section ul li p {
     padding: 2rem 1rem 0 1rem;
   }
   section.top-tracks-section ul li {
-    grid-column: span 2;
+    grid-column: span 3;
     padding-bottom: 2rem;
   }
 }
