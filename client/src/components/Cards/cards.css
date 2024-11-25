@@ -3,7 +3,7 @@
   border-radius: 50%;
   transform: translate(8.5rem, 2rem);
 }
-p {
+main p {
   font-family: var(--textFont), sans-serif;
 }
 .name {
@@ -39,7 +39,7 @@ p {
   transform: translatex(3rem);
   list-style-type: none;
 }
-li {
+ul.ulcard li {
   display: flex;
   flex-direction: row;
 }
@@ -52,6 +52,7 @@ li.music a {
 li.music a:hover {
   color: var(--titleColor);
   transform: scale(1.1);
+  transition: ease 0.2s;
 }
 .photobackground {
   background-color: var(--bgColor);
