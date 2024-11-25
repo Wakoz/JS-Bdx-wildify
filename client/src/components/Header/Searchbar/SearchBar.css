@@ -23,11 +23,6 @@ ul.dropdownItem li p {
   font-weight: normal;
 }
 
-/* li.column {
-  display: flex;
-  flex-direction: column;
-} */
-
 input.search-input {
   background-color: var(--bgColor);
   font-family: var(--textFont);

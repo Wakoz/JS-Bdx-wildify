@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./SearchBar.css";
 
 interface Artist {
   id: string;
@@ -18,7 +18,7 @@ interface Album {
   }[];
 }
 
-interface Episode {
+interface Shows {
   id: string;
   name: string;
   artists: {
@@ -30,9 +30,9 @@ interface Episode {
 }
 
 interface SearchResultListProps {
-  items: Artist[] | Album[] | Episode[];
+  items: Artist[] | Album[] | Shows[];
   title: string;
-  type: "artist" | "album" | "episode";
+  type: "artist" | "album" | "shows";
 }
 
 function SearchResultList({ items, title, type }: SearchResultListProps) {
@@ -86,16 +86,16 @@ function SearchResultList({ items, title, type }: SearchResultListProps) {
               </li>
             );
           }
-          if (type === "episode") {
-            const episode = item as Episode;
+          if (type === "shows") {
+            const shows = item as Shows;
             return (
-              <li key={episode.id} className={`${type}-item`}>
-                <p>{episode.name}</p>
+              <li key={shows.id} className={`${type}-item`}>
+                <p>{shows.name}</p>
                 <p>
                   Artiste : {""}
-                  {episode.artists?.map((artist) => artist.name).join(", ")}
+                  {shows.artists?.map((artist) => artist.name).join(", ")}
                 </p>
-                <p>Album : {episode.album.name}</p>
+                <p>Album : {shows.album.name}</p>
               </li>
             );
           }

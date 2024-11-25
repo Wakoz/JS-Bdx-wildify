@@ -1,32 +1,32 @@
 import { useEffect, useState } from "react";
-import { apiRequest } from "../../api/apiClient";
+import { fetchData } from "../../Utils/fetchUtils";
 import MyBlocks from "./MyBlocks";
-
-type ConcertItem = {
-  id: number;
-  name: string;
-  external_urls: {
-    spotify: string;
-  };
-  images: {
-    url: string;
-  }[];
-};
+import type { DisplayItem } from "./types";
 
 export default function ConcertSearch() {
-  const [userConcerts, setUserConcerts] = useState<ConcertItem[]>([]);
+  const [userConcerts, setUserConcerts] = useState<DisplayItem[]>([]);
 
   useEffect(() => {
     const fetchConcerts = async () => {
-      try {
-        const response = await apiRequest("/me/shows");
-        const data = await response.json();
-        const shows = data.items.map(
-          (item: { show: ConcertItem }) => item.show,
-        );
-        setUserConcerts(shows);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des podcasts :", error);
+      const data = await fetchData("/me/shows", (responseData: unknown) => {
+        if (
+          typeof responseData === "object" &&
+          responseData !== null &&
+          "items" in responseData
+        ) {
+          const typedResponse = responseData as {
+            items: { show: DisplayItem }[];
+          };
+
+          if (Array.isArray(typedResponse.items)) {
+            return typedResponse.items.map((item) => item.show);
+          }
+        }
+        return [];
+      });
+
+      if (data) {
+        setUserConcerts(data);
       }
     };
 
