@@ -1,4 +1,4 @@
-import "./style.css";
+import "./Pseudo.css";
 
 export interface PseudoProps {
   display_name: string;
