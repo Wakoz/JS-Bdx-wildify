@@ -1,19 +1,19 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: var(--textFont), sans-serif;
-	scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--textFont), sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
-	--bgColor: #0d0d0d;
-	--bgColorDarkRed: #7f1000;
-	--bgColorWhite: #f2f2f2;
-	--titleColor: #ed0000;
-	--titleColorDark: #f23005;
-	--bgRedColor: #7f1000;
-	--textColorWhite: #fffef8;
-	--titleFont: "Bagel Fat One";
-	--textFont: "Open sans", sans-serif;
+  --bgColor: #0d0d0d;
+  --bgColorDarkRed: #7f1000;
+  --bgColorWhite: #f2f2f2;
+  --titleColor: #ed0000;
+  --titleColorDark: #f23005;
+  --bgRedColor: #7f1000;
+  --textColorWhite: #fffef8;
+  --titleFont: "Bagel Fat One";
+  --textFont: "Open sans", sans-serif;
 }
