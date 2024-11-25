@@ -50,7 +50,6 @@ export const getRefreshToken = async () => {
 
   const expiresAT = Date.now() + data.expires_in * 1000;
   localStorage.setItem("expires_at", expiresAT.toString());
-  console.log("Expires at mis à jour :", expiresAT);
 };
 
 export const isTokenExpired = () => {

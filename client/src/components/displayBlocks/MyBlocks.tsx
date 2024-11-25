@@ -6,8 +6,6 @@ type MyBlocksProps = {
 };
 
 export default function MyBlocks({ items }: MyBlocksProps) {
-  console.log(items);
-
   return (
     <article className="blocks">
       <ul>
