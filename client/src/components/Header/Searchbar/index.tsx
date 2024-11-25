@@ -56,7 +56,7 @@ function Searchbar() {
 					onClick={handleSubmit}
 					aria-label="Valider la recherche"
 				>
-					Rechercher
+					Recherche
 				</button>
 			</div>
 
