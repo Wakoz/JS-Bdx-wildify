@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { useSearch } from "./SearchContext";
+import { useSearch } from "../../../context/SearchContext";
 import SearchResultList from "./SearchResultsList";
-import "./style.css";
+import "./Searchbar.css";
 
 function Searchbar() {
   const { searchTerm, setSearchTerm, performSearch, searchResults } =
@@ -81,12 +81,12 @@ function Searchbar() {
                 />
               )}
 
-            {searchResults.episode?.items &&
-              searchResults.episode.items.length > 0 && (
+            {searchResults.shows?.items &&
+              searchResults.shows.items.length > 0 && (
                 <SearchResultList
-                  items={searchResults.episode.items}
-                  title="Épisodes"
-                  type="episode"
+                  items={searchResults.shows.items}
+                  title="Podcasts"
+                  type="shows"
                 />
               )}
           </ul>

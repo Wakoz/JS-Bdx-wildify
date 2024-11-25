@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { SearchProvider } from "./components/Header/Searchbar/SearchContext";
+import { SearchProvider } from "./context/SearchContext";
 
 function App() {
   return (
@@ -15,5 +15,4 @@ function App() {
     </>
   );
 }
-
 export default App;

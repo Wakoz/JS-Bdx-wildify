@@ -17,11 +17,6 @@ ul.dropdownItem li p {
   font-weight: normal;
 }
 
-/* li.column {
-  display: flex;
-  flex-direction: column;
-} */
-
 input.search-input {
   background-color: var(--bgColor);
   font-family: var(--textFont);
@@ -93,7 +88,7 @@ button.search-button {
 .artist-item p,
 .album-item p,
 .track-item p {
-text-align: left;
+  text-align: left;
 }
 
 .artist-content-wrapper {

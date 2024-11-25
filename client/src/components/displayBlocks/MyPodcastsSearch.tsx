@@ -21,10 +21,10 @@ export default function PodcastSearch() {
       try {
         const response = await apiRequest("/me/episodes");
         const data = await response.json();
-        const episodes = data.items.map(
+        const shows = data.items.map(
           (item: { episode: PodcastItem }) => item.episode,
         );
-        setUserPodcasts(episodes);
+        setUserPodcasts(shows);
       } catch (error) {
         console.error("Erreur lors de la récupération des podcasts :", error);
       }
