@@ -2,13 +2,16 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { SearchProvider } from "./context/SearchContext";
 
 function App() {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <SearchProvider>
+        <Header />
+        <Outlet />
+        <Footer />
+      </SearchProvider>
     </>
   );
 }

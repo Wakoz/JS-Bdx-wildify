@@ -1,29 +1,16 @@
 import { useEffect, useState } from "react";
-import { apiRequest } from "../../api/apiClient";
+import { fetchData } from "../../Utils/fetchUtils";
 import MyBlocks from "./MyBlocks";
-
-type PlaylistItem = {
-  id: number;
-  name: string;
-  external_urls: {
-    spotify: string;
-  };
-  images: {
-    url: string;
-  }[];
-};
+import type { DisplayItem } from "./types";
 
 export default function GetPlaylists() {
-  const [userPlaylists, setUserPlaylists] = useState<PlaylistItem[]>([]);
+  const [userPlaylists, setUserPlaylists] = useState<DisplayItem[]>([]);
 
   useEffect(() => {
     const fetchPlaylists = async () => {
-      try {
-        const response = await apiRequest("/me/playlists");
-        const data = await response.json();
+      const data = await fetchData<{ items: DisplayItem[] }>("/me/playlists");
+      if (data) {
         setUserPlaylists(data.items);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des artistes :", error);
       }
     };
 

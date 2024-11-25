@@ -1,30 +1,16 @@
 import { useEffect, useState } from "react";
-import { apiRequest } from "../../api/apiClient";
+import { fetchData } from "../../Utils/fetchUtils";
 import MyBlocks from "./MyBlocks";
-
-type ArtistItem = {
-  id: number;
-  name: string;
-  genres: string[];
-  external_urls: {
-    spotify: string;
-  };
-  images: {
-    url: string;
-  }[];
-};
+import type { DisplayItem } from "./types";
 
 export default function ArtistSearch() {
-  const [userArtists, setUserArtists] = useState<ArtistItem[]>([]);
+  const [userArtists, setUserArtists] = useState<DisplayItem[]>([]);
 
   useEffect(() => {
     const fetchArtists = async () => {
-      try {
-        const response = await apiRequest("/me/top/artists");
-        const data = await response.json();
+      const data = await fetchData<{ items: DisplayItem[] }>("/me/top/artists");
+      if (data?.items) {
         setUserArtists(data.items);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des artistes :", error);
       }
     };
 
