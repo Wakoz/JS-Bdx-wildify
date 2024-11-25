@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-import "../../App.css";
-import ConcertSearch from "../../components/displayBlocks/MyConcertsSearch";
+import ExplorerSearch from "../../components/displayBlocks/MyExplorerSearch";
 import ImageBlockConcerts from "../../components/imageBlock/imageBlockConcert";
 
-export default function Concerts() {
+export default function Explorer() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -11,7 +10,7 @@ export default function Concerts() {
   return (
     <main>
       <ImageBlockConcerts />
-      <ConcertSearch />
+      <ExplorerSearch />
     </main>
   );
 }

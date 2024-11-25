@@ -8,8 +8,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import Artists from "./pages/Artists";
-import Concerts from "./pages/Concerts";
 import CoupDeCoeur from "./pages/CoupDeCoeur";
+import Concerts from "./pages/Explorer/explorer";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
 import { authLoader } from "./services/Auth/loader";

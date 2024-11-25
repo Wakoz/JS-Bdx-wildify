@@ -37,7 +37,7 @@ export default function MyBlocks({ items }: MyBlocksProps) {
             </li>
           ))
         ) : (
-          <p>Mes données YOvont s'afficher ici</p>
+          <p>Mes données vont s'afficher ici</p>
         )}
       </ul>
     </article>
