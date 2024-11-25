@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { apiRequest } from "../../api/apiClient";
-import MyBlocks from "./MyBlocks";
+import MyBlocksExplorerSearch from "./MyBlocksExplorerSearch";
 
-type CategoryItem = {
+export type DisplayItem = {
   genres?: string[];
   id: number;
   name: string;
@@ -15,15 +15,15 @@ type CategoryItem = {
 };
 
 export default function ExplorerSearch() {
-  const [userCategory, SetUserCategories] = useState<CategoryItem[]>([]);
+  const [userCategory, SetUserCategorys] = useState<DisplayItem[]>([]);
 
   useEffect(() => {
-    const fetchCategories = async () => {
+    const fetchCategorys = async () => {
       try {
         const response = await apiRequest("/browse/categories");
         const data = await response.json();
 
-        const transformedCategorys: CategoryItem[] = data.categories.items.map(
+        const transformedCategorys: DisplayItem[] = data.categories.items.map(
           (item: {
             id: string;
             name: string;
@@ -40,14 +40,14 @@ export default function ExplorerSearch() {
           }),
         );
 
-        SetUserCategories(transformedCategorys);
+        SetUserCategorys(transformedCategorys);
       } catch (error) {
         console.error("Erreur lors de la récupération des catégories :", error);
       }
     };
 
-    fetchCategories();
+    fetchCategorys();
   }, []);
 
-  return <MyBlocks items={userCategory} />;
+  return <MyBlocksExplorerSearch items={userCategory} />;
 }

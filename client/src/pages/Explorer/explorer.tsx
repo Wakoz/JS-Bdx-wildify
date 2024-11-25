@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import ExplorerSearch from "../../components/displayBlocks/MyExplorerSearch";
-import ImageBlockConcerts from "../../components/imageBlock/imageBlockConcert";
+import ExplorerSearch from "../../components/DisplayBlockExplorer/MyExplorerSearch";
+import ImageBlockExplorer from "../../components/imageBlock/imageBlockExplorer";
 
 export default function Explorer() {
   useEffect(() => {
@@ -8,8 +8,9 @@ export default function Explorer() {
   }, []);
 
   return (
+    
     <main>
-      <ImageBlockConcerts />
+      <ImageBlockExplorer />
       <ExplorerSearch />
     </main>
   );
