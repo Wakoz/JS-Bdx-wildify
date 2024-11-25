@@ -3,7 +3,7 @@ import "./cards.css";
 function Cards() {
   return (
     <>
-      <section className="photobackground">
+      <main className="photobackground">
         <section className="card">
           <article className="profile">
             <img
@@ -228,7 +228,7 @@ function Cards() {
             </ul>
           </article>
         </section>
-      </section>
+      </main>
     </>
   );
 }
