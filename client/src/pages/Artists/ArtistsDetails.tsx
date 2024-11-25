@@ -67,15 +67,13 @@ function ArtistDetails() {
   return (
     <>
       <div className="artist-details">
-        <h1>{artist.name}</h1>
-        {artist.images?.[0] && (
-          <img
-            src={artist.images[0].url}
-            alt={artist.name}
-            width="200"
-            height="200"
-          />
-        )}
+        <section className="background-image">
+          <h1>{artist.name}</h1>
+          {artist.images?.[2] && (
+            <img src={artist.images[0].url} alt={artist.name} />
+          )}
+        </section>
+
         {artist.genres && <p>Genres : {artist.genres.join(", ")}</p>}
 
         {!!albums.length && (
