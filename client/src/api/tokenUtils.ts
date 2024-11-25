@@ -26,6 +26,23 @@ export const getRefreshToken = async () => {
   const response = await fetch(url, payload);
   const data = await response.json();
 
+  if (!response.ok) {
+    console.error("Erreur lors du rafraîchissement du token :", data);
+    return;
+  }
+
+  if (!data.access_token) {
+    console.error(
+      "Erreur : aucun access_token dans la réponse du rafraîchissement !",
+    );
+    return;
+  }
+
+  if (typeof data.expires_in !== "number") {
+    console.error("Erreur : expires_in est invalide !");
+    return;
+  }
+
   localStorage.setItem("access_token", data.access_token);
   if (data.refresh_token) {
     localStorage.setItem("refresh_token", data.refresh_token);
@@ -33,6 +50,7 @@ export const getRefreshToken = async () => {
 
   const expiresAT = Date.now() + data.expires_in * 1000;
   localStorage.setItem("expires_at", expiresAT.toString());
+  console.log("Expires at mis à jour :", expiresAT);
 };
 
 export const isTokenExpired = () => {

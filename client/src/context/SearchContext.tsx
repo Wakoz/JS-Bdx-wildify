@@ -1,6 +1,6 @@
 import type React from "react";
 import { type ReactNode, createContext, useContext, useState } from "react";
-import { apiRequest, checkRefreshToken } from "../../../api/apiClient";
+import { apiRequest, checkRefreshToken } from "../api/apiClient";
 
 type SearchResults = {
   artists?: {
@@ -19,7 +19,7 @@ type SearchResults = {
       release_date: string;
     }>;
   };
-  episode?: {
+  shows?: {
     items: Array<{
       id: string;
       name: string;

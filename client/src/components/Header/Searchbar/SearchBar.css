@@ -93,7 +93,7 @@ button.search-button {
 .artist-item p,
 .album-item p,
 .track-item p {
-text-align: left;
+  text-align: left;
 }
 
 .artist-content-wrapper {

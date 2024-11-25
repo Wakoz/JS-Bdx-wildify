@@ -1,22 +1,13 @@
-import "./style.css";
-
-type DisplayItem = {
-  genres?: string[];
-  id: number;
-  name: string;
-  external_urls: {
-    spotify: string;
-  };
-  images: {
-    url: string;
-  }[];
-};
+import "./DisplayBlocks.css";
+import type { DisplayItem } from "./types";
 
 type MyBlocksProps = {
   items: DisplayItem[];
 };
 
 export default function MyBlocks({ items }: MyBlocksProps) {
+  console.log(items);
+
   return (
     <article className="blocks">
       <ul>
