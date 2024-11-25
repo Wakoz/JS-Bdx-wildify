@@ -1,3 +1,9 @@
+form {
+  padding: 0.5rem;
+  grid-area: 3 / 1 / 4 / 4;
+  text-align: center;
+}
+
 .searchbar-container {
   position: relative;
   display: flex;
@@ -45,6 +51,12 @@ button.search-button {
   width: 5rem;
   height: 2.5rem;
   margin-left: 1rem;
+}
+
+button.search-button:hover {
+  background-color: var(--titleColorDark);
+  cursor: pointer;
+  transition: 0.1s ease;
 }
 
 .dropdown-menu {
@@ -120,6 +132,10 @@ button.search-button {
 }
 
 @media screen and (min-width: 768px) {
+  form {
+    grid-area: 2 / 2 / 3 / 3;
+    width: max-content;
+  }
   input.search-input {
     width: 18rem;
     height: 2rem;
