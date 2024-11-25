@@ -8,8 +8,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import Artists from "./pages/Artists";
-import Explorer from "./pages/Explorer/explorer";
 import CoupDeCoeur from "./pages/CoupDeCoeur";
+import Explorer from "./pages/Explorer/explorer";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
 import { authLoader } from "./services/Auth/loader";

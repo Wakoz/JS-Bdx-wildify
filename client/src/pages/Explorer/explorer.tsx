@@ -8,7 +8,6 @@ export default function Explorer() {
   }, []);
 
   return (
-    
     <main>
       <ImageBlockExplorer />
       <ExplorerSearch />
