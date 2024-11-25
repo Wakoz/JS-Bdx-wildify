@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { apiRequest } from "../../api/apiClient";
+import DisplayAlbums from "../../components/DisplayAlbums";
 import DisplayTracks from "../../components/DisplayTracks";
 
 interface ArtistDetailsProps {
@@ -66,7 +67,7 @@ function ArtistDetails() {
 
   return (
     <>
-      <div className="artist-details">
+      <section className="artist-details">
         <h1>{artist.name}</h1>
         {artist.images?.[0] && (
           <img
@@ -77,29 +78,8 @@ function ArtistDetails() {
           />
         )}
         {artist.genres && <p>Genres : {artist.genres.join(", ")}</p>}
-
-        {!!albums.length && (
-          <div className="albums-section">
-            <h2>Albums</h2>
-            <div className="albums-list">
-              {albums.map((album) => (
-                <div key={album.id} className="album-item">
-                  {album.images?.[0] && (
-                    <img
-                      src={album.images[0].url}
-                      alt={album.name}
-                      width="150"
-                      height="150"
-                    />
-                  )}
-                  <p>{album.name}</p>
-                  <p>Date de sortie : {album.release_date}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+      </section>
+      <DisplayAlbums albums={albums} />
       <DisplayTracks topTracks={topTracks} />
     </>
   );

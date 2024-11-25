@@ -1,5 +1,5 @@
-section.top-tracks-section {
-  background-color: var(--bgColorDarkRed);
+section.albums-section {
+  background-color: var(--bgColor);
 }
 
 h2.section-title {
@@ -9,12 +9,12 @@ h2.section-title {
   padding-top: 2rem;
 }
 
-section.top-tracks-section ul {
+section.albums-section ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
 }
-section.top-tracks-section ul li {
+section.albums-section ul li {
   list-style-type: none;
   width: 100%;
   text-align: center;
@@ -23,20 +23,19 @@ section.top-tracks-section ul li {
   align-items: center;
   border-bottom: none;
 }
-section.top-tracks-section ul li img {
+section.albums-section ul li img {
   border-radius: 1rem;
 }
-
-section.top-tracks-section ul li p {
+section.albums-section ul li p {
   padding: 1rem;
 }
 
 @media (max-width: 768px) {
-  section.top-tracks-section ul {
+  section.albums-section ul {
     padding: 2rem 1rem 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  section.top-tracks-section ul li {
-    grid-column: span 3;
+  section.albums-sections ul li {
     padding-bottom: 2rem;
   }
 }
