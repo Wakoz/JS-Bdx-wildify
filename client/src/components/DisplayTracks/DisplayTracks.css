@@ -1,0 +1,41 @@
+section.top-tracks-section {
+  background-color: var(--bgColor);
+}
+
+h2.section-title {
+  font-family: var(--titleFont);
+  color: var(--textColorWhite);
+  margin-left: 10%;
+}
+
+section.top-tracks-section ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
+}
+section.top-tracks-section ul li {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: none;
+}
+section.top-tracks-section ul li img {
+  border-radius: 1rem;
+}
+
+section.top-tracks-section ul li p {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  section.top-tracks-section ul {
+    padding: 2rem 1rem 0 1rem;
+  }
+  section.top-tracks-section ul li {
+    grid-column: span 2;
+    padding-bottom: 2rem;
+  }
+}
