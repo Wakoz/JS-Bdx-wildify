@@ -32,8 +32,8 @@ export default function Navbar({ showLinks, setShowLinks }: NavbarProps) {
             </Link>
           </li>
           <li>
-            <Link to="/concerts" className="link" onClick={closeMenu}>
-              Concerts
+            <Link to="/Explorer" className="link" onClick={closeMenu}>
+              Explorer
             </Link>
           </li>
           <li>

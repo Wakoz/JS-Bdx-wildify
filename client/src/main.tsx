@@ -9,8 +9,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Artists from "./pages/Artists";
 import ArtistDetails from "./pages/Artists/ArtistsDetails";
-import Concerts from "./pages/Concerts";
 import CoupDeCoeur from "./pages/CoupDeCoeur";
+import Explorer from "./pages/Explorer";
 import Home from "./pages/home";
 import Podcasts from "./pages/podcasts";
 import { authLoader } from "./services/Auth/loader";
@@ -50,8 +50,8 @@ const router = createBrowserRouter([
         element: <Podcasts />,
       },
       {
-        path: "/concerts",
-        element: <Concerts />,
+        path: "/explorer",
+        element: <Explorer />,
       },
       {
         path: "/coups-de-coeur",
