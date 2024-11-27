@@ -1,3 +1,26 @@
+article.background-image {
+  width: 100%;
+  height: 45rem;
+  background-repeat: repeat;
+  background-size: 50%;
+  background-position: center;
+}
+article.background-image h1 {
+  position: absolute;
+  margin: 30% 0 0 10%;
+  font-size: 5rem;
+  color: var(--textColorWhite);
+  font-family: var(--titleFont);
+}
+
+article.background-image p {
+  position: absolute;
+  margin: 42% 0 0 10%;
+  font-size: 1rem;
+  color: var(--textColorWhite);
+  font-family: var(--textFont);
+}
+
 section.top-tracks-section {
   background-color: var(--bgColorDarkRed);
 }
@@ -22,6 +45,7 @@ section.top-tracks-section ul li {
   flex-direction: column;
   align-items: center;
   border-bottom: none;
+  cursor: auto;
 }
 section.top-tracks-section ul li img {
   border-radius: 1rem;
@@ -38,5 +62,15 @@ section.top-tracks-section ul li p {
   section.top-tracks-section ul li {
     grid-column: span 3;
     padding-bottom: 2rem;
+  }
+  article.background-image p {
+    margin: 58% 0 0 10%;
+  }
+  article.background-image {
+    height: 17rem;
+    max-height: 339px;
+  }
+  article.background-image h1 {
+    font-size: 2rem;
   }
 }

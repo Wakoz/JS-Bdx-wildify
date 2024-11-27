@@ -68,16 +68,16 @@ function ArtistDetails() {
   return (
     <>
       <section className="artist-details">
-        <h1>{artist.name}</h1>
-        {artist.images?.[0] && (
-          <img
-            src={artist.images[0].url}
-            alt={artist.name}
-            width="200"
-            height="200"
-          />
-        )}
-        {artist.genres && <p>Genres : {artist.genres.join(", ")}</p>}
+        <article
+          className="background-image"
+          style={{
+            backgroundImage: artist.images?.[0]
+              ? `url(${artist.images[0].url})`
+              : undefined,
+          }}
+        >
+          <h1>{artist.name}</h1>
+        </article>
       </section>
       <DisplayAlbums albums={albums} />
       <DisplayTracks topTracks={topTracks} />

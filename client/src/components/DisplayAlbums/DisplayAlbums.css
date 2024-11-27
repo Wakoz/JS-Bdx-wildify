@@ -22,6 +22,7 @@ section.albums-section ul li {
   flex-direction: column;
   align-items: center;
   border-bottom: none;
+  cursor: auto;
 }
 section.albums-section ul li img {
   border-radius: 1rem;
